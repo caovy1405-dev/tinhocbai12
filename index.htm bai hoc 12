@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bài tập Biểu Mẫu Web – Cute Corgi</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(#ffe6f2, #e6f7ff);
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1, h2 {
+        color: #ff6699;
+        text-align: center;
+        text-shadow: 1px 1px 3px white;
+    }
+
+    .content {
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px #ffcce6;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    /* CORGI BAY BAY */
+    .corgi {
+        position: fixed;
+        width: 130px;
+        top: 40px;
+        animation: fly 9s linear infinite;
+        z-index: 999;
+    }
+
+    @keyframes fly {
+        0%   { left: -160px; transform: rotate(0deg); }
+        50%  { left: 55%; transform: rotate(10deg); }
+        100% { left: 110%; transform: rotate(-8deg); }
+    }
+
+    .box {
+        background: #fff0f5;
+        padding: 15px;
+        border-left: 5px solid #ff66a3;
+        margin: 20px 0;
+        border-radius: 10px;
+    }
+
+    fieldset {
+        border: 2px solid #ff99cc;
+        border-radius: 10px;
+        background: #fff7fc;
+        padding: 15px;
+    }
+
+    legend {
+        color: #ff3385;
+        font-weight: bold;
+        padding: 0 10px;
+    }
+
+    input, select, textarea {
+        border: 2px solid #ffb3d9;
+        border-radius: 8px;
+        padding: 7px 10px;
+        margin: 6px 0;
+    }
+
+    input[type="submit"] {
+        background: #ff66a3;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    input[type="submit"]:hover {
+        background: #ff3385;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- CORGI BAY BAY -->
+<img class="corgi" src="https://i.imgur.com/K8Vx2qY.png" alt="Corgi bay">
+
+<h1>✨ BÀI TẬP MÔN TIN HỌC – BIỂU MẪU WEB ✨</h1>
+
+<div class="content">
+
+    <h2>🥰 1. KHÁI NIỆM</h2>
+    <div class="box">
+        Biểu mẫu web (form) là công cụ thu thập dữ liệu, cho phép người dùng nhập thông tin và gửi lên máy chủ.  
+        <br><br>
+        Biểu mẫu gồm hai phần:
+        <ul>
+            <li>Biểu mẫu HTML hiển thị cho người dùng</li>
+            <li>Ứng dụng/script xử lý d
