@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biểu Mẫu Web - Cute Corgi</title>
+
+<style>
+    body {
+        font-family: "Comic Sans MS", sans-serif;
+        background: linear-gradient(#ffe6f2, #e6f7ff);
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1, h2 {
+        color: #ff6699;
+        text-align: center;
+        text-shadow: 1px 1px 2px white;
+    }
+
+    .content {
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px #ffcce6;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    /* CORGI BAY BAY */
+    .corgi {
+        position: fixed;
+        width: 120px;
+        top: 50px;
+        animation: fly 8s linear infinite;
+        z-index: 999;
+    }
+
+    @keyframes fly {
+        0%   { left: -150px; transform: rotate(0deg); }
+        50%  { left: 60%; transform: rotate(10deg); }
+        100% { left: 110%; transform: rotate(-5deg); }
+    }
+
+    .box {
+        background: #fff0f5;
+        padding: 15px;
+        border-left: 5px solid #ff66a3;
+        margin: 20px 0;
+        border-radius: 10px;
+    }
+
+    fieldset {
+        border: 2px solid #ff99cc;
+        border-radius: 10px;
+        padding: 15px;
+        background: #fff7fc;
+    }
+
+    legend {
+        color: #ff3385;
+        font-weight: bold;
+        padding: 0 10px;
+    }
+
+    input, select, textarea {
+        border: 2px solid #ffb3d9;
+        border-radius: 8px;
+        padding: 5px 10px;
+        margin: 5px 0;
+    }
+
+    input[type="submit"] {
+        background: #ff66a3;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    input[type="submit"]:hover {
+        background: #ff3385;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- CORGI BAY BAY -->
+<img class="corgi" src="https://i.imgur.com/K8Vx2qY.png" alt="Corgi bay">
+
+<h1>✨ BIỂU MẪU WEB – MÔN TIN HỌC ✨</h1>
+
+<div class="content">
+
+    <h2>🥰 Khái niệm</h2>
+    <div class="box">
+        Biểu mẫu web hay phần tử <b>form</b> của HTML là công cụ thu thập dữ liệu, dùng để nhập vào form và xử lí tại chỗ hoặc gửi về máy chủ.  
+        Ví dụ: đăng ký tài khoản, mua hàng, tìm kiếm thông tin,...
+        <br><br>
+        Biểu mẫu gồm hai phần chính:
+        <ul>
+            <li>Biểu mẫu hiển thị trên web (HTML)</li>
+            <li>Ứng dụng/script xử lý dữ liệu (nằm ở server – không cần đề cập)</li>
+        </ul>
+
+        Biểu mẫu dùng thẻ:
+        <pre>&lt;form&gt; ... &lt;/form&gt;</pre>
+
+        Các phần tử thường gặp: <b>input, label, select, textarea</b>  
+        Khác: fieldset, legend, datalist…
+    </div>
+
+    <h2>📌 Cấu trúc các phần tử trong biểu mẫu</h2>
+
+    <div class="box">
+        <b>Label:</b><br>
+        <pre>&lt;label for="id_input"&gt;Tên nhãn&lt;/label&gt;</pre>
+
+        <b>Input:</b><br>
+        <pre>&lt;input id="id" type="type" name="name"&gt;</pre>
+
+        <b>Select – Option:</b><br>
+        <pre>
+&lt;select id="id" name="name"&gt;
+    &lt;option value="value"&gt;Hiển thị&lt;/option&gt;
+&lt;/select&gt;
+        </pre>
+
+        <b>Textarea:</b><br>
+        <pre>&lt;textarea rows="5" cols="30"&gt;&lt;/textarea&gt;</pre>
+        
+        <b>Fieldset + Legend:</b> dùng để nhóm các phần tử chung.
+    </div>
+
+    <h2>🍱 NHIỆM VỤ 1 – Biểu mẫu thông tin món ăn</h2>
+
+    <form>
+        <h3>Thông tin món ăn</h3>
+
+        <label for="food">Tên món:</label><br>
+        <input type="text" id="food" name="food"><br>
+
+        <label for="price">Đơn giá:</label><br>
+        <input type="number" id="price" name="price"><br>
+
+        <input type="submit" value="Gửi thông tin">
+    </form>
+
+    <hr>
+
+    <h2>📝 NHIỆM VỤ 2 – Biểu mẫu đăng ký môn thi</h2>
+
+    <form>
+        <fieldset>
+            <legend>Thông tin thí sinh</legend>
+
+            <label for="name">Họ tên:</label><br>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="cccd">CCCD:</label><br>
+            <input type="number" id="cccd" name="cccd"><br>
+
+            <label for="dob">Ngày sinh:</label><br>
+            <input type="date" id="dob" name="dob"><br>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Môn thi</legend>
+
+            Giới tính:  
+            <input type="radio" name="gender" value="male"> Nam
+            <input type="radio" name="gender" value="female"> Nữ
+            <br><br>
+
+            Môn bắt buộc:  
+            <input type="checkbox" name="toan"> Toán  
+            <input type="checkbox" name="van"> Văn  
+            <input type="checkbox" name="nn"> Ngoại ngữ  
+            <br><br>
+
+            Tổ hợp:  
+            <input type="radio" name="group" value="khtn"> KHTN  
+            <input type="radio" name="group" value="khxh"> KHXH  
+        </fieldset>
+
+        <br>
+        <input type="submit" value="Đăng ký">
+    </form>
+
+    <hr>
+
+    <h2>📚 Ví dụ – Phần tử Form & Input</h2>
+
+    <div class="box">
+        <b>Form cơ bản:</b>
+        <pre>&lt;form action="/register" method="post"&gt;&lt;/form&gt;</pre>
+
+        <b>Form có select:</b>
+        <pre>
+&lt;select id="country"&gt;
+    &lt;option value="vietnam"&gt;Việt Nam&lt;/option&gt;
+&lt;/select&gt;
+        </pre>
+
+        <b>Textarea:</b>
+        <pre>&lt;textarea rows="4" cols="50"&gt;&lt;/textarea&gt;</pre>
+
+        <b>Input email:</b>
+        <pre>&lt;input type="email"&gt;</pre>
+    </div>
+
+    <hr>
+
+    <h2>⭐ VẬN DỤNG – Ví dụ hoàn chỉnh</h2>
+
+    <p>Dưới đây là ví dụ đăng ký thành viên (được giữ nguyên nội dung bạn cung cấp):</p>
+
+    <pre>
+&lt;form action="/submit_registration"&gt;
+    &lt;input type="text" name="fullname"&gt;
+    ...
+&lt;/form&gt;
+    </pre>
+
+</div>
+
+</body>
+</html>
